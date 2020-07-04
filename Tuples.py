@@ -4,7 +4,7 @@ try:
     Document = open(Filename,"r")
 except:
     print("Document" + Filename + "Doesnt exist")
-
+#Hours list
 HoursList = list()
 
 for line in Document:
