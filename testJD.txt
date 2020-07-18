@@ -1,0 +1,233 @@
+
+                  To view this video please enable JavaScript, and consider upgrading to a web browser that
+                  
+This course will show how one can treat the Internet as a source of data.  We will scrape, parse, and read web data as well as access data using web APIs.  We will work with HTML, XML, and JSON data formats in Python.  This course will cover Chapters 11-13 of the textbook “Python for Everybody”. To succeed in this course, you should be familiar with the material covered in Chapters 1-10 of the textbook and the first two courses in this specialization.  These topics include variables and expressions, conditional execution (loops, branching, and try/except), functions, Python data structures (strings, lists, dictionaries, and tuples), and manipulating files.  This course covers Python 3.Json, Xml, Python Programming, Web Scr
+apingApr 24, 2020Great course. The lectu
+res are clear and thorough. The assignme
+nts are challenging yet doable. The only
+ thing I would like is to see more assig
+nments to get more practice with the tec
+hniques learned.Jun 07, 2019Getting a bi
+t more challenging than the earlier cour
+ses in the specialization. The exercises
+ require more struggle, but all the info
+rmation is there. Another step along the
+ way. Thank you, Dr. Chuck!So "XML" is w
+hat we call the Extensible Markup Langua
+ge.  And basically XML, any serializatio
+n format has some special characters and
+  then some rules about how to form the 
+serialized document,  basically, from th
+e internal structures.  And so the rules
+ of XML and part of the reason that XML 
+become popular is,  it became popular at
+ about the time that HTML became popular
+.  Or you could almost say that XML infl
+uenced HTML.  But the notion of less tha
+ns and greater thans as the active chara
+cters,  as the way to tag or otherwise m
+ark the information.  And so, that's how
+ it works, and so  it works just like HT
+ML, and there's start tags and end tags.
+  And that sort of brackets a chunk of s
+tuff, and so people is a tag.  And then 
+person, and person, there that's another
+ tag, an ending tag.  And then name and 
+/name, that's an ending tag.  And the wa
+y to think about this is there is a simp
+le element.  These are called elements o
+r  nodes, and we'll have a couple of way
+s visualizing these coming up.  There is
+ one kind of element that just has some 
+text in between.  And so that is the sim
+plest bit, it's called the simple elemen
+t.  And then another kind of element lik
+e this person actually just has,  sort o
+f, child nodes associated with it.  And 
+so the simple elements are these, and  t
+hen the complex elements are person and 
+people.  And so they're nested together.
+  And the indenting is just something I'
+m showing you to make it look pretty.  X
+ML doesn't really care what extra spaces
+ you put in,  but it certainly helps us 
+as human beings to understand what's goi
+ng on.  And so the primary purpose of XM
+L is to share structured data.  It was a
+ simplified subset of this SGML,  which 
+kind of was the precursor to both XML an
+d HTML.  SGML was a little hard, so  you
+ could almost think of XML as like a sim
+plified easy version of SGML.  And so he
+re are sort of the basics of it. It has 
+a start tag and an end tag.  So that's w
+hat the start tag  and end tag are.  Sta
+rt tag, end tag, start tag, end tag, sta
+rt tag, end tag.  Now, so that's what st
+art tags and end tags,  the end tags are
+ the ones that have the slash.  There is
+ textual content, that's there's the stu
+ff between the tags.  So there's just th
+e text, what you call the text nodes.  A
+nd then, there are attributes, and attri
+butes are always on the start tags.  So 
+the phone and the email, and  they are k
+ey-value pairs using double quotes, as t
+he type="intl".  And the key thing about
+ XML versus HTML is we get to make up th
+e tags.  In HTML we say things like h1 o
+r a for the anchor tag,  or h1 for heade
+r level one.  Here, based on how we are 
+going to agree between the two applicati
+ons exchanging  data, you can say the ta
+g is person and /person.  You still have
+ to follow the rules, though, there is a
+ slash tag at the end.  So attributes. A
+nd then you can also have a self-closing
+ tag.  And that is, you just include thi
+s /> at the end of the open tag.  And it
+'s as if you have a closing tag of the s
+ame name with an empty text area.  And s
+o that's what this is saying, so that's 
+a self-closing tag.  Okay, like I said t
+he whitespace doesn't really matter so m
+uch.  We can pull these things up, we te
+nd to indent them  like any kind of prog
+ramming environment to help our own read
+ing.  But, in general, whitespace,  exce
+pt in the middle of things like these te
+xt areas, the whitespace does matter.  B
+ut, sort of, between here and here, the 
+whitespace doesn't matter.  Between here
+ and here, the whitespace doesn't matter
+.  So the whitespace, these extra spaces
+ that I used to indent it,  it doesn't r
+eally matter.  The only time it matters 
+is in between, when you're in a text are
+a.  Here's some sample XML, just to give
+ you some ideas.  Here we have, there's 
+always one big outer tag of XML,  you ha
+ve the start tag and an end tag.  And th
+ere's only one of those, because I can't
+ be, sort of, multiply defined.  There's
+ always the outer tag. We see a series o
+f attributes. Right?  So the attributes 
+are key equals and  then double=quoted s
+tring, key equals double=quoted string. 
+ And if you look at the HTML, you'll see
+ that this is exactly the same as HTML. 
+ The difference is in HTML you're suppos
+ed to have a thing called href= "blah,  
+blah, blah", right?  And so HTML is kind
+ of like XML that's more highly specifie
+d.  Whereas this is just two programs ag
+ree on a format and they use it.  So we 
+have an outer tag that's a complex eleme
+nt.  And then we have, like  in that tit
+le, you can have sort of things that are
+ in order, like this ingredient.  You se
+e some attributes on there, and  then yo
+u have a text block in the middle of her
+e.  So we'll see in a second how these t
+hings all work. And then a sub tag.  It'
+s like a tree, we'll see that in a secon
+d, and a series of steps.  And so these 
+can be in order, they can be more than o
+ne of these things.  And we can create a
+ll kinds of structures that are really d
+esigned based on  the needs of our worki
+ng two applications that are trying to c
+ooperate.  So tags are the beginning and
+ the end.  Attributes are key-value pair
+s on the start tag.  Serialization and d
+eserialization is the act of taking from
+ an internal structure  in one programmi
+ng environment, sending it across the ne
+twork.  Deserialization is receiving acr
+oss the network and  translating it back
+ into an internal structure on the desti
+nation computer.  So there's a couple di
+fferent ways that we can look at this.  
+The most common one, and the word nodes 
+kind of comes from trees.  Each of these
+ is like a node, because it sort of come
+s together.  It's a place of connection,
+ so we call this thing a node.  And so y
+ou can think of the outer document as th
+e top node of the tree.  It's kind of an
+ upside-down tree, actually.  If this wa
+s a tree, it'd have a trunk.  And then w
+e just have stuff like this and a squirr
+el sitting up here, right?  But it's kin
+d of an upside-down tree.  And so we hav
+e the top of the tree here and then it h
+as two child nodes,  the b node and the 
+c node are directly beneath the a node. 
+ And then we model,  as you'll see in a 
+bit why, we model the text in between th
+em as a child.  So it's a child of the b
+ node, so that's the text is a text node
+,  and it is a child of the b node.  So 
+the b node is all of this, and then this
+ is the child of the b node.  And the c 
+node has two children, d and e.  And the
+ d has as child with capital Y and e has
+ a child of capital Y.  So, these are th
+e simple and complex elements.  And then
+ there's the text within the elements.  
+But, like I said, we model the text as a
+ child of the node,  as you will soon se
+e, right now.  And that's because we mod
+el attributes as different children.  So
+, if we change this a little bit, and we
+ make this have an attribute, w = "5".  
+all of this is part of the b node.  And 
+the b has the text area, there's only on
+e of those, and  there could be many att
+ributes right? There could be lots of at
+tributes.  I just have w="5", and so  on
+e of the children of the b node is the a
+ttribute child or the text child.  And t
+here can be many of these attribute chil
+ds,  because there could be lots of attr
+ibutes.  You know a="4", b="19", they've
+ always got to have double quotes.  And 
+so you could have many these attributes 
+and they're sort of children.  But if yo
+u grab the node, and  you'll see when we
+ start talking about doing this in progr
+amming languages.  We'll see why it's im
+portant to kind of understand what  it m
+eans when you grab this versus when you 
+grab that.  Those aren't the same thing.
+  X is the text at the node b, and  the 
+node b is that text, and attributes, and
+ everything all rolled up together.  Ano
+ther way to think about these and  a way
+ to actually parse XML is through what w
+e call paths.  In a sense what you do is
+ you just draw the tree and then you wal
+k down the tree.  And so this X could be
+ thought of as a piece of data that's at
+ /a/b.  So you start at the top.  Go dow
+n to a, go down to b, what do you find t
+here?  If we go down here and go from a 
+to c to d, and find Y, that's this one, 
+/a/c/d.  So this is like a path.  And yo
+u can think of this like folders on your
+ computer.  The a folder, then there's t
+wo folders within a which are b and c,  
+the children folders.  And then within c
+ there is children folders d and e.  And
+ so like this one here is /a/c/e and the
+n say, what's living there at /a/c/e?  T
+he text that's living at /a/c/e is Z.  A
+nd so that's another way to think about 
+XML.  Now the thing we're going to talk 
+about next is an important aspect where 
+ we're trying to decide between two appl
+ications.  If I"m producing data and you
+'re consuming data,  and you blow up, wa
+s it the data's fault, or was it your fa
+ult?  And that's what XML Schema does fo
+r us.
